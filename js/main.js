@@ -99,3 +99,28 @@ $(document).ready(function () {
     const year = new Date().getFullYear();
     $('#year').text(year);
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const videoModal = document.getElementById("videoModal");
+    const videoFrame = document.getElementById("videoFrame");
+    const videoTitle = document.getElementById("videoModalTitle");
+
+    if (videoModal) {
+        videoModal.addEventListener("show.bs.modal", function (event) {
+            const button = event.relatedTarget;
+
+            const videoUrl = button.getAttribute("data-video");
+            const title = button.getAttribute("data-title");
+
+            videoTitle.textContent = title;
+
+            let separator = videoUrl.includes("?") ? "&" : "?";
+            videoFrame.src = videoUrl + separator + "autoplay=1";
+        });
+
+        videoModal.addEventListener("hidden.bs.modal", function () {
+            videoFrame.src = "";
+        });
+    }
+});
