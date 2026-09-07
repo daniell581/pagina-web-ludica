@@ -1,0 +1,512 @@
+/* ===== VARIABLES ===== */
+:root {
+  --color-navbar: #D2C4B4;
+  --color-footer-bg: #81A6C6;
+  --color-footer-text: #1a2e3d;
+  --color-primario: #5a7a9a;
+  --color-acento: #81A6C6;
+  --color-texto: #2d3748;
+  --color-fondo-seccion: #f8f5f2;
+  --color-tarjeta: #ffffff;
+  --sombra: 0 4px 16px rgba(90, 122, 154, 0.12);
+  --radio: 12px;
+}
+
+/* ===== BASE ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-fondo-seccion);
+  color: var(--color-texto);
+  padding-bottom: 70px; /* espacio para footer fijo */
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background-color: var(--color-navbar) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.navbar-brand {
+  font-size: 1.4rem;
+  color: #3a5a7a !important;
+  letter-spacing: 1px;
+}
+.nav-link {
+  color: #3a5a7a !important;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: #1a3550 !important;
+}
+.dropdown-menu {
+  border: none;
+  box-shadow: var(--sombra);
+  border-radius: var(--radio);
+}
+.dropdown-item:hover {
+  background-color: var(--color-acento);
+  color: white;
+}
+
+/* ===== CAROUSEL / IMAGENES ===== */
+.img-c {
+  height: 420px;
+  object-fit: cover;
+  object-position: center;
+}
+@media (max-width: 768px) {
+  .img-c {
+    height: 220px;
+  }
+}
+@media (min-width: 1400px) {
+  .img-c {
+    height: 500px;
+  }
+}
+
+.titulo-banner {
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+  font-size: 2rem;
+}
+
+/* ===== SECCIONES ===== */
+.seccion {
+  min-height: calc(100vh - 130px);
+  animation: fadeIn 0.4s ease;
+}
+.seccion.oculta {
+  display: none;
+}
+.seccion.active {
+  display: block;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.seccion-contenido {
+  padding: 50px 15px 40px;
+}
+
+/* ===== ENCABEZADOS DE SECCION ===== */
+.encabezado-seccion {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.encabezado-seccion h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primario);
+  margin: 10px 0 8px;
+}
+.icono-seccion {
+  font-size: 2.5rem;
+  color: var(--color-acento);
+}
+.linea-titulo {
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primario), var(--color-acento));
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* ===== SEPARADORES ===== */
+.separador {
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  gap: 15px;
+}
+.linea-decorativa {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-acento), transparent);
+}
+.separador-texto {
+  color: var(--color-primario);
+  font-size: 1.6rem;
+}
+
+/* ===== TARJETA DE CONTENIDO ===== */
+.tarjeta-contenido {
+  background: var(--color-tarjeta);
+  border-radius: var(--radio);
+  padding: 32px 36px;
+  box-shadow: var(--sombra);
+  line-height: 1.8;
+  font-size: 1rem;
+}
+.tarjeta-contenido p {
+  margin-bottom: 1rem;
+  color: #3a4a5a;
+}
+.tarjeta-contenido p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== CARDS DE ACCESO RAPIDO ===== */
+.card-acceso {
+  background: white;
+  border-radius: var(--radio);
+  padding: 28px 20px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: var(--sombra);
+  border: 2px solid transparent;
+}
+.card-acceso:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-acento);
+  box-shadow: 0 8px 24px rgba(90,122,154,0.2);
+}
+.card-acceso h5 {
+  color: var(--color-primario);
+  margin-top: 10px;
+  font-weight: 600;
+}
+.icono-card {
+  font-size: 2.2rem;
+  color: var(--color-acento);
+}
+
+/* ===== LISTA JUSTIFICACION ===== */
+.lista-justificacion {
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+}
+.lista-justificacion li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  color: #3a4a5a;
+}
+.lista-justificacion li:last-child {
+  border-bottom: none;
+}
+.lista-justificacion li i {
+  color: var(--color-acento);
+  margin-right: 10px;
+}
+
+/* ===== OBJETIVOS ===== */
+.objetivo-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.objetivo-icono {
+  font-size: 2rem;
+  color: var(--color-acento);
+  min-width: 40px;
+  margin-top: 4px;
+}
+.objetivo-card h5 {
+  color: var(--color-primario);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.objetivo-card p {
+  margin: 0;
+  color: #3a4a5a;
+}
+.divisor-objetivo {
+  border-color: #e0e0e0;
+  margin: 20px 0;
+}
+
+.objetivo-especifico-card {
+  background: var(--color-fondo-seccion);
+  border-radius: var(--radio);
+  padding: 20px;
+  height: 100%;
+  border-left: 4px solid var(--color-acento);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.objetivo-especifico-card p {
+  margin: 0;
+  color: #3a4a5a;
+  font-size: 0.95rem;
+}
+.numero-obj {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-acento);
+  line-height: 1;
+}
+
+/* ===== BOTON NAV SECCION ===== */
+.btn-nav-seccion {
+  background: linear-gradient(135deg, var(--color-primario), var(--color-acento));
+  color: white;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.25s;
+}
+.btn-nav-seccion:hover {
+  transform: scale(1.05);
+  color: white;
+  box-shadow: 0 4px 16px rgba(90,122,154,0.4);
+}
+
+/* ===== CREDITOS ===== */
+.credito-card {
+  background: var(--color-fondo-seccion);
+  border-radius: var(--radio);
+  padding: 24px 16px;
+  transition: all 0.25s;
+}
+.credito-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra);
+}
+.credito-card h5 {
+  color: var(--color-primario);
+  margin: 12px 0 8px;
+  font-weight: 700;
+}
+.avatar-credito {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--color-primario), var(--color-acento));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  color: white;
+}
+.badge-rol {
+  background-color: var(--color-acento);
+  color: white;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: var(--color-footer-bg);
+  color: var(--color-footer-text);
+  font-weight: 600;
+  font-size: 0.85rem;
+  min-height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 20px;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+/* ===== SECCION JUEGOS ===== */
+#lista-juegos {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Tarjeta de juego */
+.juego-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  cursor: pointer;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  border: 2px solid transparent;
+}
+.juego-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(90,122,154,0.22);
+  border-color: var(--color-acento);
+}
+.juego-proximamente {
+  cursor: default;
+  opacity: 0.6;
+}
+.juego-proximamente:hover {
+  transform: none;
+  box-shadow: var(--sombra);
+  border-color: transparent;
+}
+
+/* Miniatura del juego */
+.juego-miniatura {
+  position: relative;
+  height: 180px;
+  background: linear-gradient(135deg, #d2e8f5, #b0cfe8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.juego-miniatura-vacia {
+  background: #f0f0f0;
+}
+.juego-icono-grande {
+  font-size: 4rem;
+  color: var(--color-primario);
+  transition: transform 0.3s;
+}
+.juego-card:hover .juego-icono-grande {
+  transform: scale(1.12);
+}
+
+/* Overlay al hacer hover */
+.juego-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(90, 122, 154, 0.82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.juego-card:hover .juego-overlay {
+  opacity: 1;
+}
+
+/* Info del juego */
+.juego-info {
+  padding: 18px 22px 20px;
+}
+.juego-info h5 {
+  font-weight: 700;
+  color: var(--color-primario);
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+}
+.juego-info p {
+  color: #5a6a7a;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.juego-badge {
+  background-color: #e8f2fa;
+  color: var(--color-primario);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.juego-badge-vacio {
+  background-color: #f0f0f0;
+  color: #aaa;
+}
+
+/* Card de acceso rapido - version juego */
+.card-acceso-juego {
+  background: linear-gradient(135deg, #e8f4ff, #d2e8f5);
+}
+.card-acceso-juego .icono-card {
+  color: var(--color-primario);
+}
+
+/* ===== MODAL DEL JUEGO ===== */
+.juego-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 20, 35, 0.88);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.juego-modal.activo {
+  display: flex;
+  animation: fadeIn 0.25s ease;
+}
+
+.juego-modal-contenido {
+  background: #1a2535;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  overflow: hidden;
+}
+
+.juego-modal-titulo {
+  color: white;
+  margin: 0;
+  padding: 14px 60px 14px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.juego-cerrar {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: rgba(255,255,255,0.12);
+  border: none;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 1;
+}
+.juego-cerrar:hover {
+  background: rgba(255,80,80,0.7);
+}
+
+/* Wrapper 16:9 para el iframe */
+.juego-iframe-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.juego-iframe-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 576px) {
+  .juego-modal {
+    padding: 10px;
+  }
+}
+
+iframe{
+  width: 100%;
+  height: 100vh;
+  border:none;
+}
+.img-logo{
+  width: 50px;
+  height: 50px;
+}

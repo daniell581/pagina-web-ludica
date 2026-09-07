@@ -1,0 +1,190 @@
+  <!-- JUEGOS -->
+  <section id="juegos" class="seccion active">
+    <div class="container seccion-contenido">
+      <div class="encabezado-seccion">
+        <i class="fas fa-gamepad icono-seccion"></i>
+        <h1>Juegos con Genially</h1>
+        <div class="linea-titulo"></div>
+        <p class="mt-3 text-muted">Aprende jugando con nuestras actividades interactivas</p>
+      </div>
+
+      <!-- Grid de juegos -->
+      <div class="row g-4 justify-content-center" id="lista-juegos">
+
+        <!-- Juego 1 -->
+        <div class="col-lg-6 col-md-10">
+          <div class="juego-card" onclick="abrirJuego(0)">
+            <div class="juego-miniatura">
+              <i class="fas fa-tractor juego-icono-grande"></i>
+              <div class="juego-overlay">
+                <span><i class="fas fa-play-circle me-2"></i>Jugar ahora</span>
+              </div>
+            </div>
+            <div class="juego-info">
+              <h5>Cuidador de la Granja</h5>
+              <p>Aprende sobre los animales y el cuidado de la granja en esta divertida actividad interactiva.</p>
+              <span class="juego-badge"><i class="fas fa-leaf me-1"></i>Ciencias Naturales</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Juego 2 -->
+        <div class="col-lg-6 col-md-10">
+          <div class="juego-card" onclick="abrirJuego(1)">
+            <div class="juego-miniatura" style="background: linear-gradient(135deg, #f5e6d2, #e8d0b0);">
+              <i class="fas fa-puzzle-piece juego-icono-grande" style="color:#a07040;"></i>
+              <div class="juego-overlay">
+                <span><i class="fas fa-play-circle me-2"></i>Jugar ahora</span>
+              </div>
+            </div>
+            <div class="juego-info">
+              <h5>Rompecabezas</h5>
+              <p>Pon a prueba tu logíca y habilidad espacial armando este divertido rompecabezas interactivo.</p>
+              <span class="juego-badge"><i class="fas fa-brain me-1"></i>Logica</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Juego 3 -->
+        <div class="col-lg-6 col-md-10">
+          <div class="juego-card" onclick="abrirJuego(2)">
+            <div class="juego-miniatura" style="background: linear-gradient(135deg, #d2f5e3, #b0e8c8);">
+              <i class="fas fa-trophy juego-icono-grande" style="color:#2a8a55;"></i>
+              <div class="juego-overlay">
+                <span><i class="fas fa-play-circle me-2"></i>Jugar ahora</span>
+              </div>
+            </div>
+            <div class="juego-info">
+              <h5>Desafiandote a ti mismo</h5>
+              <p>Supera tus propios limites con este desafio interactivo lleno de preguntas y retos.</p>
+              <span class="juego-badge" style="background:#e0f5ec; color:#2a7a50;"><i class="fas fa-bolt me-1"></i>Desafio</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Placeholder -->
+        <div class="col-lg-6 col-md-10">
+          <div class="juego-card juego-proximamente">
+            <div class="juego-miniatura juego-miniatura-vacia">
+              <i class="fas fa-plus juego-icono-grande" style="opacity:0.3;"></i>
+            </div>
+            <div class="juego-info">
+              <h5 style="color:#aaa;">Proximo juego...</h5>
+              <p style="color:#bbb;">Proximamente se agregaran mas actividades interactivas.</p>
+              <span class="juego-badge juego-badge-vacio">En camino</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Modal del juego -->
+    <div class="juego-modal" id="juegoModal" onclick="cerrarJuego(event)">
+      <div class="juego-modal-contenido">
+        <button class="juego-cerrar" onclick="cerrarJuego()">
+          <i class="fas fa-times"></i>
+        </button>
+        <h5 class="juego-modal-titulo" id="juegoTitulo">Cargando...</h5>
+        <div class="juego-iframe-wrap">
+          <iframe id="juegoIframe" src="" title="Juego" frameborder="0"
+            allowfullscreen allowscriptaccess="always" scrolling="yes" allownetworking="all">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="separador"><div class="linea-decorativa"></div></div>
+  </section>
+
+
+   <div class="container seccion-contenido">
+      <div class="encabezado-seccion">
+        <i class="fas fa-gamepad icono-seccion"></i>
+        <h1>Juegos con html</h1>
+        <div class="linea-titulo"></div>
+        <p class="mt-3 text-muted">Aprende jugando con nuestras actividades interactivas</p>
+      </div>
+
+      <!-- Grid de juegos -->
+      <div class="row g-4 justify-content-center" id="lista-juegos">
+
+        <!-- Juego 1 -->
+        <div class="col-lg-6 col-md-10">
+          <div class="juego-card" onclick="abrirJuego(4)">
+            <div class="juego-miniatura">
+              <i class="fas fa-tractor juego-icono-grande"></i>
+              <div class="juego-overlay">
+                <span><i class="fas fa-play-circle me-2"></i>Jugar ahora</span>
+              </div>
+            </div>
+            <div class="juego-info">
+              <h5>Actividad de arrastre</h5>
+              <p>Arrastra la imagen a donde corresponde.</p>
+              <span class="juego-badge"><i class="fas fa-leaf me-1"></i>Ciencias Naturales</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Juego 2 -->
+        <div class="col-lg-6 col-md-10">
+          <div class="juego-card" onclick="abrirJuego(5)">
+            <div class="juego-miniatura" style="background: linear-gradient(135deg, #f5e6d2, #e8d0b0);">
+              <i class="fas fa-puzzle-piece juego-icono-grande" style="color:#a07040;"></i>
+              <div class="juego-overlay">
+                <span><i class="fas fa-play-circle me-2"></i>Jugar ahora</span>
+              </div>
+            </div>
+            <div class="juego-info">
+              <h5>Selecciona la respuesta correcta</h5>
+              <p>Observa la imagen y selecciona la respuesta correcta </p>
+              <span class="juego-badge"><i class="fas fa-brain me-1"></i>Logica</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Juego 3 -->
+        <div class="col-lg-6 col-md-10">
+          <div class="juego-card" onclick="abrirJuego(6)">
+            <div class="juego-miniatura" style="background: linear-gradient(135deg, #d2f5e3, #b0e8c8);">
+              <i class="fas fa-trophy juego-icono-grande" style="color:#2a8a55;"></i>
+              <div class="juego-overlay">
+                <span><i class="fas fa-play-circle me-2"></i>Jugar ahora</span>
+              </div>
+            </div>
+            <div class="juego-info">
+              <h5>Selecciona la respuesta correcta</h5>
+              <p>Observa la imagen y selecciona la respuesta correcta </p> </p>
+              <span class="juego-badge" style="background:#e0f5ec; color:#2a7a50;"><i class="fas fa-bolt me-1"></i>Desafio</span>
+            </div>
+          </div>
+        </div>
+
+
+           <!-- Juego 4 -->
+        <div class="col-lg-6 col-md-10">
+          <div class="juego-card" onclick="abrirJuego(7)">
+            <div class="juego-miniatura" style="background: linear-gradient(135deg, #d2f5e3, #b0e8c8);">
+              <i class="fas fa-trophy juego-icono-grande" style="color:#2a8a55;"></i>
+              <div class="juego-overlay">
+                <span><i class="fas fa-play-circle me-2"></i>Jugar ahora</span>
+              </div>
+            </div>
+            <div class="juego-info">
+              <h5>Completa la frase</h5>
+              <p>Analiza la frase y escribe la palabra que corresponde para completar la frase </p>
+              <span class="juego-badge" style="background:#e0f5ec; color:#2a7a50;"><i class="fas fa-bolt me-1"></i>Desafio</span>
+            </div>
+          </div>
+        </div>
+
+        
+
+      </div>
+
+
+
+
+
+
+    
